@@ -1,6 +1,7 @@
 # R Data Analysis and Visualisation
 
 Group name: **sapply(data, pls_clean_me)**
+
 This repository contains a group project focused on exploring data analysis and visualisation techniques using the R programming language.
 
 The aim of the project is to apply fundamental R programming concepts to real-world datasets, including data cleaning, transformation, statistical analysis, and visualisation.
@@ -26,6 +27,20 @@ The project demonstrates how R can be used to:
 - **ggplot2**
 - **tidyverse**
 - Base R statistical functions
+
+---
+
+## Repository Structure
+
+```
+climate-change-data-analysis-r/
+│
+├── data/        # Raw and processed datasets
+├── scripts/     # R scripts used throughout the project
+├── outputs/     # Generated graphs and exported data
+├── report/      # Final project report
+└── README.md
+```
 
 ---
 
