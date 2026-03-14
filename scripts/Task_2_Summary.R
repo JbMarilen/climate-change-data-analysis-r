@@ -1,4 +1,4 @@
-# Task 2
+# Task 2: Summary Statistics - Frequency Count & Proportions
 # Load the climate change dataset
 climate_data <- read.csv("data/Beginner_Climate_Change_Dataset_20_Features_1200_Rows.csv")
 
@@ -17,11 +17,12 @@ print(freq_count)
 # The result is a value between 0 and 1 for each country, representing its share of the full dataset.
 country_proportions <- freq_count / nrow(climate_data)
 
-# Print the proportions to verify
+# Print the proportions
 print(country_proportions)
-print(sum(country_proportions))
 
 # Optional: convert to a dataframe if required
 # proportions_df <- as.data.frame(country_proportions)
 # colnames(proportions_df) <- c("country", "country_proportions")
 # print(proportions_df)
+
+# WEIRD WORDING OF QUESTION REMEMBER TO CHECK IF THIS IS WHAT THEY WANT
