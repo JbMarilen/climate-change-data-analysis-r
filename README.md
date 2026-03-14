@@ -1,23 +1,12 @@
 # R Data Analysis and Visualisation
 
-Group name: **sapply(data, pls_clean_me)**
+**Group name:** `sapply(data, pls_clean_me)`  
+**Module:** CSC1013 — Introduction to R, Dublin City University  
+**Dataset:** Climate Change & Global Warming Dataset (Project 1)  
 
-This repository contains a group project focused on exploring data analysis and visualisation techniques using the R programming language.
-
-The aim of the project is to apply fundamental R programming concepts to real-world datasets, including data cleaning, transformation, statistical analysis, and visualisation.
-
----
-
-## Project Objectives
-
-The project demonstrates how R can be used to:
-
-- Import and manipulate datasets
-- Perform exploratory data analysis (EDA)
-- Create reusable functions for data transformation
-- Generate statistical summaries
-- Visualise data using the **ggplot2** library
-- Export processed datasets and visualisations
+This repository contains our group project applying fundamental R programming 
+concepts to a real-world climate dataset, covering data cleaning, transformation, 
+statistical analysis, and visualisation.
 
 ---
 
@@ -31,14 +20,13 @@ The project demonstrates how R can be used to:
 ---
 
 ## Repository Structure
-
 ```
 climate-change-data-analysis-r/
 │
-├── data/        # Raw and processed datasets
-├── scripts/     # R scripts used throughout the project
-├── outputs/     # Generated graphs and exported data
-├── report/      # Final project report
+├── data/           # Raw dataset and exported .csv / .RData files
+├── scripts/        # R scripts for each task (Task 1–10)
+├── outputs/        # Exported charts (.png)
+├── report/         # Project report and AI usage documentation
 └── README.md
 ```
 
@@ -46,61 +34,31 @@ climate-change-data-analysis-r/
 
 ## Project Workflow
 
-The project follows a typical data analysis pipeline:
-
-1. **Data Import**
-   - Load datasets into R
-   - Inspect structure and variables
-
-2. **Data Cleaning**
-   - Handle formatting inconsistencies
-   - Convert variables into appropriate formats
-
-3. **Data Transformation**
-   - Create new variables
-   - Apply custom functions for calculations
-
-4. **Exploratory Data Analysis**
-   - Calculate statistical summaries
-   - Investigate relationships between variables
-
-5. **Data Visualisation**
-   - Create histograms
-   - Generate bar charts
-   - Produce scatter plots
-   - Visualise trends and distributions
-
-6. **Export Results**
-   - Save processed datasets
-   - Export graphs for reporting
+1. **Data Import** — Load and inspect the dataset
+2. **Data Cleaning** — Handle formatting issues, convert types
+3. **Data Transformation** — Custom functions, new derived columns
+4. **Exploratory Data Analysis** — Statistical summaries, relationships
+5. **Visualisation** — Histograms, bar charts, scatterplots via ggplot2
+6. **Export** — Processed datasets (.csv, .RData) and charts (.png)
 
 ---
 
-## Example Visualisations
+## AI Usage
 
-The project includes several types of visualisations such as:
-
-- Histograms for distribution analysis
-- Bar charts for categorical comparisons
-- Scatterplots for identifying relationships between variables
-
-These visualisations were created using **ggplot2**.
+GenAI tools were used in accordance with DCU's CSC1013 policy (Level 4 — GenAI Collaboration).  
+All AI-assisted code is flagged with `# AI-ASSISTED:` comments in scripts.  
+Full documentation of prompts, outputs, and refinements is in `report/`.
 
 ---
 
-## Learning Outcomes
+## References
 
-Through this project we practiced:
-
-- Writing reusable R functions
-- Working with data frames and vectors
-- Applying statistical calculations
-- Performing exploratory data analysis
-- Building reproducible analysis workflows
+- Lander, J.P. (2014). *R for Everyone*. Addison-Wesley. (Ch. 6–7)
+- Wickham, H. *ggplot2: Elegant Graphics for Data Analysis*. https://ggplot2.tidyverse.org/
+- DCU CSC1013 Lecture Materials
 
 ---
 
 ## Disclaimer
 
-This repository contains work completed as part of a university coursework project.  
-It is shared for educational and portfolio purposes only.
+Submitted as part of CSC1013 coursework at DCU. Shared for educational purposes only.
