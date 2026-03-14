@@ -57,7 +57,7 @@ What was difficult, what choices you made and why.
 
 | Task | Prompt Summary | Initial Output | Changes Made |
 |------|---------------|----------------|--------------|
-| e.g. Task 5| "How do I make a histogram in ggplot2 with..." | [paste output] | Changed colour, added title |
+| Task 1 | "Best practices for R script setup: shared library files, conditional ggplot2 installation, and data naming conventions." | Recommended the `source()` pattern, `if(!require())` logic for installs, and warned against using `df` as a name. | Created `Task_1.1_Setup.R` for dependencies and data loading; used `source()` in `Task_1.2_Setup.R` to run a test scatter plot. |
 
 > Full prompt logs and screenshots available on request / in appendix.
 
