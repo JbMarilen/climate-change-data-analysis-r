@@ -74,7 +74,35 @@ and what the group set out to explore.
 ...
 
 ### Task 4 — Expected 2050 Temperature & Merge
-...
+
+**What was done:**
+
+**Function — `calculate_expected_temp_2050()`:**
+- Accepts any dataframe as input and returns a two-column summary dataframe
+  containing each unique country and its expected average temperature in 2050.
+- `group_by(country)` splits the data into one group per unique country.
+- `summarise()` collapses each group into a single row using the formula from the task spec:
+  - `expected_avg_temperature_2050_country = mean(global_avg_temperature) + mean(predicted_temperature_2050)`
+- `as.data.frame()` converts the tidyverse tibble output into a standard R dataframe.
+
+**Outside the function:**
+- The function was applied to the `climate` dataframe and the result stored as
+  `country_expected_avg_temperatures_2050`.
+- Exported to `country_expected_avg_temperatures_2050.csv` using `write.csv()`.
+- Merged back into the original `climate` dataframe using `merge()`, joining on the
+  `country` column. This adds `expected_avg_temperature_2050_country` to every row,
+  matched by country.
+- Final merged dataframe saved as `merged_temperatures.csv`.
+
+**Key decisions:**
+- The function takes `df` as a parameter rather than referencing `climate` directly,
+  keeping it dynamic and reusable. The task spec explicitly requires the function to
+  work with any dataframe, not just `climate`. That said, for a calculation this simple
+  a function is not strictly necessary and could have been done in a single pipe chain.
+- `row.names = FALSE` used in both `write.csv()` calls to prevent R writing an
+  unwanted numeric index column into the output files.
+- Two verification prints are included — one after the function call, one after the
+  merge — to confirm each step produced the correct output.
 
 ### Task 5 — Histogram
 ...
