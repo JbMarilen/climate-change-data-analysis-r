@@ -23,7 +23,7 @@ print(country_expected_avg_temperatures_2050)
 # write.csv() exports the dataframe as a .csv file
 # row.names = FALSE prevents R from adding an unwanted index column
 write.csv(country_expected_avg_temperatures_2050, 
-    "outputs/country_expected_avg_temperatures_2050.csv",
+    "data/country_expected_avg_temperatures_2050.csv",
     row.names = FALSE)
 
 # merge() performs a join between the original climate and the new summary table
@@ -38,7 +38,7 @@ merged_temperatures <- merge(
 # Save the merged dataframe to a .csv file
 write.csv(
     merged_temperatures,
-    "outputs/merged_temperatures.csv",
+    "data/merged_temperatures.csv",
     row.names = FALSE
 )
 
