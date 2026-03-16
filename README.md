@@ -23,10 +23,10 @@ statistical analysis, and visualisation.
 ```
 climate-change-data-analysis-r/
 │
+├── charts/      # Exported chart images (.png)
 ├── data/           # Raw dataset and exported .csv / .RData files
-├── scripts/        # R scripts for each task (Task 1–10)
-├── outputs/        # Exported charts (.png)
 ├── report/         # Project report and AI usage documentation
+├── scripts/        # R scripts for each task (Task 1–10)
 └── README.md
 ```
 
