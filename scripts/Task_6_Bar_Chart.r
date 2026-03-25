@@ -26,4 +26,4 @@ Bar_Chart <- ggplot(climateRI_summary, aes(
         )
 
 print(Bar_Chart)
-ggsave("charts/task6")
+ggsave("charts/Task_6_Bar_Chart.png", plot = Bar_Chart)
