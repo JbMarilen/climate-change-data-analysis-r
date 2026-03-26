@@ -9,8 +9,9 @@ Lowest_ClimateRI <- function(x) {
         group_by(country) %>%
         # this calculates the average climate risk index for each county
         summarize(average_climateRI = mean(climate_risk_index)) %>%
-        # this returns the the lowest 2 country with the smallest climate risk index
+        # this finds the the lowest 2 country with the smallest climate risk index
         slice_min(average_climateRI, n = 2)
 }
 
+# this returns the 2 countries with the lowest climate_risk_index.
 Lowest_ClimateRI(climate)
