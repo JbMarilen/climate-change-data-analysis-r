@@ -6,7 +6,12 @@ only_uk <- climate %>%
 first_100_uk <- only_uk[1:100,]
 
 scatter_uk_100 <- ggplot(first_100_uk, aes(x = year, y = co2_concentration_ppm)) +
-  geom_point()
+  geom_point() +
+  labs(
+    title = "Co2 concentration in the UK over time",
+    x = "Time (in years)",
+    y = "Co2 Concentration (ppm)"
+  )
 
 print(scatter_uk_100)
-ggsave("charts/Task_9_Subsets.png", plot = scatter_plot)
+ggsave("charts/Task_9_Co2_UK_100.png", plot = scatter_uk_100)
