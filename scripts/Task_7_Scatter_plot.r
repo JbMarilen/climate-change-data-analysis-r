@@ -9,6 +9,7 @@ aggregated_data <- climate %>%
 #print(aggregated_data, n = 20)
 scatter_plot <- ggplot(aggregated_data, aes(x = co2_concentration_mean, y = temperature_mean)) +
     geom_point() +
+    geom_smooth(method = "lm", se = TRUE, color = "blue") +  # adds regression line
     labs (
         title = "CO2 Concentration (ppm) vs Average Temperature Anomaly",
         x = "Average CO2 Concentration (ppm)",
