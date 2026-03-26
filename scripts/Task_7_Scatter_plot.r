@@ -1,5 +1,5 @@
 #Task 7: Scatterplot
-source("scripts/Task_1.1_Setup.R") #load df and dplyr
+source("scripts/Task_1.1_Setup.R") # load df, dplyr, ggplot2
 
 aggregated_data <- climate %>%
     group_by(year) %>%
