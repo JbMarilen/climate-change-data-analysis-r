@@ -14,7 +14,8 @@ climateRI_summary <- climate %>%
 Bar_Chart <- ggplot(climateRI_summary, aes(
     # "reorder" ensures that the countries that appear on the x-axis are in assending order of thier corresponding mean values of climate_risk_index
     x = reorder(country, average_climateRI), 
-    y = average_climateRI
+    y = average_climateRI,
+    fill = country
 )) + 
     # draws the type of chart in our case bar chart
     geom_col() + 
