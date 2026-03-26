@@ -10,5 +10,18 @@ statistic_func <- function(df) {
 }
 
 #finding the statistics of the expected average temperature 2050 dataframe
-stats_2050 <- statistic_func("data/country_expected_avg_temperatures_2050.csv")
-print(stats_2050)
+df_temp_50 <- read.csv("data/country_expected_avg_temperatures_2050.csv")
+stats_2050 <- statistic_func(df_temp_50$expected_avg_temperature_2050_country)
+
+print("Predicted Average Temperature 2050")
+print(stats_2050$m)
+
+uk_temps <- climate %>%
+  filter(country == "UK") %>%
+  select(max_temperature)
+
+print(uk_temps)
+
+stats_uk <- statistic_func(uk_temps)
+print("Standard Deviation of UK max temperatures")
+print(stats_uk$std)
