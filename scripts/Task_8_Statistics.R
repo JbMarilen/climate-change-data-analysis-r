@@ -2,11 +2,11 @@
 source("scripts/Task_1.1_Setup.R") #load df and dplyr
 
 statistic_func <- function(df) {
-    stats_full <- list(
+    return(list(
         m = mean(df),
         v = var(df),
         std = sd(df)
-    )
+    ))
 }
 
 #finding the statistics of the expected average temperature 2050 dataframe
@@ -16,11 +16,11 @@ stats_2050 <- statistic_func(df_temp_50$expected_avg_temperature_2050_country)
 print("Predicted Average Temperature 2050")
 print(stats_2050$m)
 
-uk_temps <- climate %>%
+uk_temps_df <- climate %>%
   filter(country == "UK") %>%
   select(max_temperature)
 
-print(uk_temps)
+uk_temps <- uk_temps_df$max_temperature
 
 stats_uk <- statistic_func(uk_temps)
 print("Standard Deviation of UK max temperatures")
