@@ -1,6 +1,6 @@
 # Task 10: Function and Filter
 
-source("scripts/Task_1.1_Setup.R")
+source("scripts/Task_1.1_Setup.R") # load df and dplyr
 
 # question : Create a function that evaluates all countries based on their average climate_risk_index, and then returns the 2 countries with the lowest climate_risk_index.
 Lowest_ClimateRI <- function(x) {
