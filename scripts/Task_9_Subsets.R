@@ -1,4 +1,4 @@
-source("scripts/Task_1.1_Setup.R") #load df and dplyr
+source("scripts/Task_1.1_Setup.R") # load df, dplyr, ggplot2
 
 only_uk <- climate %>%
   filter(country == "UK")
