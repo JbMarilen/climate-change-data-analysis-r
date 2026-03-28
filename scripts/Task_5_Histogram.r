@@ -1,6 +1,6 @@
 source("scripts/Task_1.1_Setup.R") #load df and dplyr
 
-
+#the histogram is split in 2, this graph creates seperate ones for each country
 histogram_sea_facet <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country)) +
   geom_histogram(binwidth = 0.5, color = "black") +
   labs(
