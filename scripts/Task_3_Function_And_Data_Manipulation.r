@@ -14,12 +14,22 @@ Temp_Diff <- function(df, col_a, col_b) {
     df[[col_a]] - df[[col_b]]
 }
 
-# this uses the function "temp_diff" that we made to do what the question asks and adds them into a new df called "climate_temperature_diffrences" giving us 2 new columns 
+# Test the function works before using it in the pipeline
+# Expected: a numeric vector of differences between max and min temperature
+test_result <- Temp_Diff(Temp_Data, "max_temperature", "min_temperature")
+print(head(test_result))
+
+# mutate() adds new columns to the dataframe without removing existing ones
+# The dot (.) refers to the dataframe currently being piped, in this case Temp_Data
+# This means we're correctly passing the piped data into Temp_Diff rather than hardcoding Temp_Data inside the function call, which would break if we ever piped a different dataframe through
 climate_temperature_differences <- Temp_Data %>%
     mutate(
-        temperature_diff = Temp_Diff(Temp_Data, "max_temperature", "min_temperature"),
-        seasurface_air_temp_diff = Temp_Diff(Temp_Data, "sea_surface_temperature", "global_avg_temperature")
-        )
+        temperature_diff = Temp_Diff(., "max_temperature", "min_temperature"),
+        seasurface_air_temp_diff = Temp_Diff(., "sea_surface_temperature", "global_avg_temperature")
+    )
+
+# Preview to confirm the two new columns were added correctly
+print(head(climate_temperature_differences))
 
 # this saves the climate_temperature_diffreneces df as a r binary data file 
 saveRDS(climate_temperature_differences, file = "data/climate_temperature_differences.rds")
