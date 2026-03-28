@@ -7,7 +7,8 @@ print(
     ggplot(climate, aes(x = max_temperature, y = co2_concentration_ppm)) +
     geom_point() +
     labs(
+        title = "Test Plot: Max Temperature vs CO2 Concentration",
         x = "Max Temperature (°C)",
-        y = "CO₂ Concentration (ppm)"
+        y = "CO2 Concentration (ppm)"
     )
 )
