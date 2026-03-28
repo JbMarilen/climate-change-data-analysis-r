@@ -1,7 +1,7 @@
 # Task 6: Bar Chart
 source("scripts/Task_1.1_Setup.R") # load df, dplyr, ggplot2
 
-# Group the data by country to compute the mean of the climate_risk_index
+# Grouped the data by country to compute the mean climate_risk_index
 climateRI_summary <- climate %>%
     # the rows get grouped by unique country names
     group_by(country) %>%
