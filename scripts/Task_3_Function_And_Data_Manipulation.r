@@ -3,7 +3,8 @@
 source("scripts/Task_1.1_Setup.R") # load df and dplyr
 
 # question : "Choose the columns 'max_temperature', 'min_temperature', ‘sea_surface_temperature’ and 'global_avg_temperature'"
-# this selects the listed columns and makes a new df with them using thier data, essentially its rows stay the same but its only got the columns we want it to have
+# this selects the listed columns and makes a new df with them using thier data, 
+# essentially its rows stay the same but its only got the columns we want it to have
 Temp_Data <- climate %>%
     select(max_temperature, min_temperature, sea_surface_temperature, global_avg_temperature)
 
