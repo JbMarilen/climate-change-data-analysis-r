@@ -1,5 +1,8 @@
 source("scripts/Task_1.1_Setup.R") #load df and dplyr
 
+# this loads the saved R binary data from task 3
+climate_temperature_differences <- readRDS("data/climate_temperature_differences.rds")
+
 #the histogram is split in 2, this graph creates seperate ones for each country
 histogram_sea_facet <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country)) +
   geom_histogram(binwidth = 0.5, color = "black") +

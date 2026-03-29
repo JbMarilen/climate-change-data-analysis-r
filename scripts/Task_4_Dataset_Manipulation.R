@@ -2,6 +2,9 @@
 
 source("scripts/Task_1.1_Setup.R") # load df and dplyr
 
+# this loads the saved R binary data from task 3
+climate_temperature_differences <- readRDS("data/climate_temperature_differences.rds")
+
 # For each unique country, calculate the expected average temperature in 2050
 calculate_expected_temp_2050 <- function(df) {
     df %>% # take the input dataframe

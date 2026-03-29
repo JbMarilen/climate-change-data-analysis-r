@@ -2,6 +2,9 @@
 
 source("scripts/Task_1.1_Setup.R") # load df and dplyr
 
+# this loads the saved R binary data from task 3
+climate_temperature_differences <- readRDS("data/climate_temperature_differences.rds")
+
 # question : Creates a function that evaluates all countries based on their average climate_risk_index, 
 # and then returns the 2 countries with the lowest climate_risk_index.
 Lowest_ClimateRI <- function(x) {
