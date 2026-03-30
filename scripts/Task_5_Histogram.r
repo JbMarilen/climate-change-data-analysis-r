@@ -13,6 +13,7 @@ histogram_sea_facet <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country
   ) +
   facet_wrap(~country)
 
+#histogram for all countries, different colours for each country
 histogram_sea_all <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country)) +
   geom_histogram(binwidth = 0.5, color = "black") +
   labs(
@@ -21,6 +22,7 @@ histogram_sea_all <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country))
     y = "Frequency"
   )
 
+# prints and saves both graphs as pngs
 print(histogram_sea_all)
 ggsave("charts/Task_5_Histogram_sea_all.png", plot = histogram_sea_all)
 
