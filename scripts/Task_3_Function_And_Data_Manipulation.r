@@ -33,3 +33,4 @@ print(head(climate_temperature_differences))
 
 # this saves the climate_temperature_diffreneces df as a r binary data file 
 saveRDS(climate_temperature_differences, file = "data/climate_temperature_differences.rds")
+print("data/climate_temperature_differences.rds")

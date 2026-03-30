@@ -1,6 +1,9 @@
 # Task 6: Bar Chart
 source("scripts/Task_1.1_Setup.R") # load df, dplyr, ggplot2
 
+# this loads the saved R binary data from task 3
+climate_temperature_differences <- readRDS("data/climate_temperature_differences.rds")
+
 # Grouped the data by country to compute the mean climate_risk_index
 climateRI_summary <- climate %>%
     # the rows get grouped by unique country names
