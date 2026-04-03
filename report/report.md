@@ -76,24 +76,24 @@ and what the group set out to explore.
 
 **Data - 4 columns, (max_temperature, min_temperature, sea_surface_temperature and global_avg_temperature) were chosen from the climate dataframe and stored as Temp_Data using the select() function
 
-**Dynamic Function- made a function that got the diffrence between 2 coulmns, it accepts the column name as strings and gives a numareic vector output which is the diffrences of the 2 names columns.
-we used df[[col_a]] insted of df$col_a as the question said to make the function dynamic and $ does not work with string variables, i.e. this makes the function usable with any column names that are given as the arguments.
+**Dynamic Function- made a function that got the diffrence between 2 columns, it accepts the column name as strings and gives a numeric vector output which is the differences of the 2 names columns.
+we used df[[col_a]] instead of df$col_a as the question said to make the function dynamic and $ does not work with string variables, i.e. this makes the function usable with any column names that are given as the arguments.
 
 **Outside the function:**
 tested the function on temp_data before using it in the pipeine to ensure it gave the correct output
 
 used mutate() to add new columns (Temperature_diff and seasurface_air_temp_diff) like the question asked and used the function we made to get thier values 
 
-we used "." insted of Temp_data in the function as to keep it dynamic as appose to hardcoding it
+we used "." instead of Temp_data in the function as to keep it dynamic as oppose to hardcoding it
 
-made a new dataframe (climate_temperature_diffrences) using the data from temp_diff dataframe and saved it as a R Binary file using saveRDS()
+made a new dataframe (climate_temperature_differences) using the data from temp_diff dataframe and saved it as a R Binary file using saveRDS()
 
 **Key Decisions:**
-used df[[]] insted of df$ to ensure the function stays dynamic and to allow column names to be passed as strings 
+used df[[]] instead of df$ to ensure the function stays dynamic and to allow column names to be passed as strings 
 
-used "." insted of "temp_data" to make the function work on any dataframe and not just Temp_data
+used "." instead of "temp_data" to make the function work on any dataframe and not just Temp_data
 
-we tested the temp_data df before using mutate() to add new columns to ensure the function was working as it was intened to
+we tested the temp_data df before using mutate() to add new columns to ensure the function was working as it was intended to
 
 
 ### Task 4 — Expected 2050 Temperature & Merge
