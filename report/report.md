@@ -159,7 +159,18 @@ geom_col() was used instead of geom_bar() as we already computed mean values and
 ...
 
 ### Task 10 — Lowest Climate Risk Function
-...
+
+**What was done:**
+
+**Function- Lowest_ClimateRI():**
+splits the dataframe into one group per unique country using group_by(country) and compute the mean climate_risk_index using summarize() and stores it into average_climateRI, we return the 2 rows with the lowest average_climateRI using slice_min(average_climateRI, n = 2)
+
+we then use the function "Lowest_ClimateRI" on the climate dataframe to see if it outputs the countries with the lowest average_climateRI
+another way to see that this function works is by looking at our bar_chart and see the first 2 x values if they match with our output of "Lowest_ClimateRI(climate)" then we know that the function works
+
+**Key decisions:**
+used slice_min() as oppose to arrange() and head() as it makes the code easier to understand and does not overcomplicate it and it returns the n smallest values without needing to sort the entire data frame first
+
 
 ---
 
