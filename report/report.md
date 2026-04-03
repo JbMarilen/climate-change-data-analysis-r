@@ -82,7 +82,7 @@ we used df[[col_a]] instead of df$col_a as the question said to make the functio
 **Outside the function:**
 tested the function on temp_data before using it in the pipeine to ensure it gave the correct output
 
-used mutate() to add new columns (Temperature_diff and seasurface_air_temp_diff) like the question asked and used the function we made to get thier values 
+used mutate() to add new columns (Temperature_diff and seasurface_air_temp_diff) like the question asked and used the function we made to get their values 
 
 we used "." instead of Temp_data in the function as to keep it dynamic as oppose to hardcoding it
 
@@ -131,7 +131,23 @@ we tested the temp_data df before using mutate() to add new columns to ensure th
 ...
 
 ### Task 6 — Bar Chart
-...
+
+**What was done:**
+
+**Data - "ClimateRI_summary":**
+we grouped by the country column on the climate data frame and using Summarize() we computed the mean of the climate_risk_index column for each country and stored the output into "average_climateRI"
+used arrange() to sort the values of average_climateRI into ascending order
+
+**The Bar Chart - "Bar_chart":**
+used ggplot() with climateRI_summary as the data
+reorder() was used on the x axis to ensure that the data is shown in ascending order of their y values, i.e. it makes it so the x values with the lowest y value appear on the left and the highest on the right
+fill = ... makes each x value appear distinct to make the graph easier to understand
+labs() lets you add titles and names to x and y axes
+
+**Key Decisions:**
+reorder() was used in addition to arrange() as ggplot does not always respect the order of the dataframe so we used reorder to ensure that it does what the question asked us to do
+
+geom_col() was used instead of geom_bar() as we already computed mean values and so there was no need for ggplot to aggregate anything 
 
 ### Task 7 — Scatterplot
 ...
