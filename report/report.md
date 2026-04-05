@@ -225,30 +225,7 @@ another way to see that this function works is by looking at our bar_chart and s
 **Key decisions:**
 used slice_min() as oppose to arrange() and head() as it makes the code easier to understand and does not overcomplicate it and it returns the n smallest values without needing to sort the entire data frame first
 
----
-
-## 3. Challenges & Decisions
-What was difficult, what choices you made and why.
-
----
-
-## 4. AI Usage Log
-
-| Task | Prompt Summary | Initial Output | Changes Made |
-|------|---------------|----------------|--------------|
-| Task 1 | "Best practices for R script setup: shared library files, conditional ggplot2 installation, and data naming conventions." | Recommended the `source()` pattern, `if(!require())` logic for installs, and warned against using `df` as a name. | Created `Task_1.1_Setup.R` for dependencies and data loading; used `source()` in `Task_1.2_Setup.R` to run a test scatter plot. |
-
-> Full prompt logs and screenshots available on request / in appendix.
-
----
-
-## 5. Reflective Learning
-Short reflection per group member on what you learned about R, 
-data analysis, and working with GenAI tools.
-
----
-
-## 6. References
+## References
 - Lander, J.P. (2014). *R for Everyone*. Ch. 6–7
 - Wickham, H. *ggplot2 documentation*. https://ggplot2.tidyverse.org/
 - DCU CSC1013 Lecture slides
