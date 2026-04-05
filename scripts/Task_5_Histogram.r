@@ -11,7 +11,9 @@ histogram_sea_facet <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country
     x = "Sea Level Rise (mm)",
     y = "Frequency"
   ) +
-  facet_wrap(~country)
+  facet_wrap(~country) +
+  theme_minimal() +
+  theme(legend.position = "none") # removes the legend since each facet is already labelled with the country name
 
 #histogram for all countries, different colours for each country
 histogram_sea_all <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country)) +
@@ -20,7 +22,8 @@ histogram_sea_all <- ggplot(climate, aes(x = sea_level_rise_mm, fill = country))
     title = "Distribution of Sea Level Rise (mm)",
     x = "Sea Level Rise (mm)",
     y = "Frequency"
-  )
+  ) +
+  theme_minimal()
 
 # prints and saves both graphs as pngs
 print(histogram_sea_all)

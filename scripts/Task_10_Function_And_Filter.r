@@ -7,8 +7,8 @@ climate_temperature_differences <- readRDS("data/climate_temperature_differences
 
 # question : Creates a function that evaluates all countries based on their average climate_risk_index, 
 # and then returns the 2 countries with the lowest climate_risk_index.
-Lowest_ClimateRI <- function(x) {
-    climate %>%
+Lowest_ClimateRI <- function(df) {
+    df %>%
         # the rows in the climate df get grouped by unique country names
         group_by(country) %>%
         # this calculates the average climate risk index for each county
@@ -18,4 +18,4 @@ Lowest_ClimateRI <- function(x) {
 }
 
 # this returns the 2 countries with the lowest climate_risk_index.
-Lowest_ClimateRI(climate)
+print(Lowest_ClimateRI(climate))
