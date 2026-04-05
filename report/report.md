@@ -71,7 +71,30 @@ and what the group set out to explore.
   left commented pending clarification of the task wording.
 
 ### Task 3 — Temperature Difference Function
-...
+
+**What was done:**
+
+**Data - 4 columns, (max_temperature, min_temperature, sea_surface_temperature and global_avg_temperature) were chosen from the climate dataframe and stored as Temp_Data using the select() function
+
+**Dynamic Function- made a function that got the diffrence between 2 columns, it accepts the column name as strings and gives a numeric vector output which is the differences of the 2 names columns.
+we used df[[col_a]] instead of df$col_a as the question said to make the function dynamic and $ does not work with string variables, i.e. this makes the function usable with any column names that are given as the arguments.
+
+**Outside the function:**
+tested the function on temp_data before using it in the pipeine to ensure it gave the correct output
+
+used mutate() to add new columns (Temperature_diff and seasurface_air_temp_diff) like the question asked and used the function we made to get their values 
+
+we used "." instead of Temp_data in the function as to keep it dynamic as oppose to hardcoding it
+
+made a new dataframe (climate_temperature_differences) using the data from temp_diff dataframe and saved it as a R Binary file using saveRDS()
+
+**Key Decisions:**
+used df[[]] instead of df$ to ensure the function stays dynamic and to allow column names to be passed as strings 
+
+used "." instead of "temp_data" to make the function work on any dataframe and not just Temp_data
+
+we tested the temp_data df before using mutate() to add new columns to ensure the function was working as it was intended to
+
 
 ### Task 4 — Expected 2050 Temperature & Merge
 
@@ -117,7 +140,24 @@ graph to analyse.
 - Saved the graphs as pngs using ggsave and put them into the graphs.
 
 ### Task 6 — Bar Chart
-...
+
+**What was done:**
+
+**Data - "ClimateRI_summary":**
+we grouped by the country column on the climate data frame and using Summarize() we computed the mean of the climate_risk_index column for each country and stored the output into "average_climateRI"
+used arrange() to sort the values of average_climateRI into ascending order
+
+**The Bar Chart - "Bar_chart":**
+used ggplot() with climateRI_summary as the data
+reorder() was used on the x axis to ensure that the data is shown in ascending order of their y values, i.e. it makes it so the x values with the lowest y value appear on the left and the highest on the right
+fill = ... makes each x value appear distinct to make the graph easier to understand
+labs() lets you add titles and names to x and y axes
+
+**Key Decisions:**
+reorder() was used in addition to arrange() as ggplot does not always respect the order of the dataframe so we used reorder to ensure that it does what the question asked us to do
+
+geom_col() was used instead of geom_bar() as we already computed mean values and so there was no need for ggplot to aggregate anything 
+
 
 ### Task 7 — Scatterplot
 
@@ -173,7 +213,17 @@ a rise in base co2 levels over the years as more of the dots are upper leaning
 using ggsave as a png.
 
 ### Task 10 — Lowest Climate Risk Function
-...
+
+**What was done:**
+
+**Function- Lowest_ClimateRI():**
+splits the dataframe into one group per unique country using group_by(country) and compute the mean climate_risk_index using summarize() and stores it into average_climateRI, we return the 2 rows with the lowest average_climateRI using slice_min(average_climateRI, n = 2)
+
+we then use the function "Lowest_ClimateRI" on the climate dataframe to see if it outputs the countries with the lowest average_climateRI
+another way to see that this function works is by looking at our bar_chart and see the first 2 x values if they match with our output of "Lowest_ClimateRI(climate)" then we know that the function works
+
+**Key decisions:**
+used slice_min() as oppose to arrange() and head() as it makes the code easier to understand and does not overcomplicate it and it returns the n smallest values without needing to sort the entire data frame first
 
 ---
 
