@@ -5,7 +5,7 @@
 **Dataset:** Climate Change & Global Warming Dataset (Project 1)  
 
 This repository contains our group project applying fundamental R programming 
-concepts to a real-world climate d, covering data cleaning, transformation, 
+concepts to a real-world climate dataset, covering data cleaning, transformation, 
 statistical analysis, and visualisation.
 
 ---
