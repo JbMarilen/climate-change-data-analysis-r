@@ -19,10 +19,3 @@ country_proportions <- freq_count / nrow(climate)
 
 # Print the proportions
 print(country_proportions)
-
-# Optional: convert to a dataframe if required
-# proportions_df <- as.data.frame(country_proportions)
-# colnames(proportions_df) <- c("country", "country_proportions")
-# print(proportions_df)
-
-# WEIRD WORDING OF QUESTION REMEMBER TO CHECK IF THIS IS WHAT THEY WANT

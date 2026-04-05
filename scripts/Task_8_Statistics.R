@@ -1,10 +1,10 @@
 source("scripts/Task_1.1_Setup.R") #load df and dplyr
 
-statistic_func <- function(df) {
+statistic_func <- function(col) {
     return(list(
-        mean = mean(df),
-        variance = var(df),
-        standard_deviation = sd(df)
+        mean = mean(col),
+        variance = var(col),
+        standard_deviation = sd(col)
     ))
 }
 
