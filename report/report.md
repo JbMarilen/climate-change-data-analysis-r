@@ -110,19 +110,67 @@ and what the group set out to explore.
 
 **Question:**
 - Make a histogram of `sea_level_rise_mm` column.
-
+- This was done using ggplot, using different country colors to easily distinguish 
+between countries, labeled the axises accordingly and changed the binwidth.
+- Decided to add another graph faceted by countries, so each country has their own mini
+graph to analyse.
+- Saved the graphs as pngs using ggsave and put them into the graphs.
 
 ### Task 6 — Bar Chart
 ...
 
 ### Task 7 — Scatterplot
-...
+
+**What was done:**
+
+**Question 1: Aggregating Data**
+- grouped the dataframe by the year (`groupby`) and used `summarize` to get the mean 
+`co2_concentration_ppm` and `temperature_anomaly` for each year.
+
+**Question 2: Creating Scatterplot**
+- used ggplot to create a scatterplot with the required X and Y axis using the
+data from question 1s aggregated data.
+- also created a line of linear regression `geom_smooth` to see if there was a 
+pattern in the graph.
+- the linear regression line showed a very subtle trend of mean temperature
+increasing as the mean co2 in the atmosphere increased. 
+- The graph was saved as a png using ggsave
 
 ### Task 8 — Statistical Functions
-...
+
+**What was done:**
+
+**Question 1: Creating the Function**
+- The function in this question accepts a range of values (in a list)
+returns a list of 3 different outputs, mean, standard deviation and variance
+- This was using R built in functions (`mean(), sd(), var()`)
+
+**Question 2: Using the Function**
+- We read the 2050 temperature CSV in and put it into the function with just 
+the expected average temperature using the (`$`) symbol to choose a single row
+- Printed just the mean using the same method `print(stats_2050$m)`
+
+- For the next part, we filter the main dataframe to only include the columns of UK and 
+the respective Max Temperature of the UK entries.
+- We then ran the Max Temperature column into the function, only outputting the 
+standard deviation with `$std`
 
 ### Task 9 — Filter & Plot (UK)
-...
+
+**What was done:**
+
+**Question 1: Filtering Data**
+- Firstly, filtered the climate data frame to only show UK entries, 
+this keeps all the rows, and the question needs 100 rows. This was 
+done using `only_uk[1:100,]` to only select the rows 1 to 100.
+This allows us to properly plot only the first 100 rows of the dataframe
+
+**Question 2: Plotting the Data**
+- Using the 100 row dataframe we got from Question 1, we make a scatterplot 
+for co2 concentration over time (years). The graph shows that there has been 
+a rise in base co2 levels over the years as more of the dots are upper leaning
+- The graph was done using ggplot and labeled accordingly. It is also saved 
+using ggsave as a png.
 
 ### Task 10 — Lowest Climate Risk Function
 ...
